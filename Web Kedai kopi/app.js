@@ -7,7 +7,16 @@ document.addEventListener('alpine:init', () => {
        { id: 5, name: 'Sumatra Madheling', img: '5.jpg', price: 40000 },
     ]
     }))
-})
+    
+    Alpine.store('cart', {
+        items: [],
+        total: 0,
+        quantity: 0,
+        add(newItem) {
+            console.log(newItem);
+        }
+    });
+});
 
 
 // Konversi ke rupiah
